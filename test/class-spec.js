@@ -5,30 +5,37 @@ const { Word } = require("../class");
 
 describe("Word", function () {
   describe("Word constructor function", function () {
+
     it('should have a "word" property', function () {
-      expect.fail("replace with your code");
+      expect(Word.word).to.equal(Word.word);
     });
-  
+
     it('should set the "word" property when a new word is created', function () {
-      expect.fail("replace with your code");
+      let hello = new Word("hello");
+      expect(hello.word).to.equal("hello");
     });
   });
 
   describe("removeVowels function", function () {
+    let hello = new Word("hello");
     it("should return a the word with all vowels removed", function () {
-      expect.fail("replace with your code");
+      expect(hello.removeVowels()).to.equal("hll");
     });
   });
 
   describe("removeConsonants function", function () {
+    let hello = new Word("hello");
     it("should return the word with the consonants removed", function () {
-      expect.fail("replace with your code");
+      expect(hello.removeConsonants()).to.equal("eo");
     });
   });
-  
+
   describe("pigLatin function", function () {
+    let hello = new Word("hello");
+    let apple = new Word("apple");
     it("should return the word converted to pig latin", function () {
-      expect.fail("replace with your code");
+      expect(hello.pigLatin()).to.equal("ellohay")
+      expect(apple.pigLatin()).to.equal("appleyay")
     });
   });
 });
